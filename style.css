@@ -133,3 +133,18 @@ html{scroll-behavior:smooth}[id]{scroll-margin-top:84px}
 .hae-profile .hae-career li{margin:10px 0}
 .hae-profile .hae-career .date{display:inline-block;width:170px;font-weight:900;color:#111}
 .hae-profile .hae-career .em{color:#e11d48;font-weight:900}
+
+/* ===== CARDS IN SECTION-WORK ===== */
+.section-work .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
+.section-work .card{grid-column:span 4}
+@media(max-width:991.98px){.section-work .cards{grid-template-columns:1fr}.section-work .card{grid-column:span 12}}
+
+/* Two-column centered layout for sections like HOMEPAGE */
+.cards.cards--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cards.cards--two .card{grid-column:unset}
+@media(max-width:991.98px){.cards.cards--two{grid-template-columns:1fr}}
+
+/* Make card thumbnails consistent height in sections as well */
+.section-work .card-thumb img{height:260px;object-fit:cover}
+@media(max-width:991.98px){.section-work .card-thumb img{height:220px}}
+
