@@ -170,60 +170,83 @@ html{scroll-behavior:smooth}[id]{scroll-margin-top:84px}
 
 
 /* 소통 */
-.collab-map-section {
-  text-align: center;
-  margin: 50px 0;
-  font-family: 'Pretendard', sans-serif;
+.portfolio-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 56px 20px;
+    }
+.portfolio-section .container {
+width: 100%;
+margin: 0 auto;
+padding: 0 20px;
 }
-.collab-map {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  margin: 40px auto;
-  border-radius: 50%;
-  background: #f9f9f9;
-  border: 2px solid #ddd;
+.portfolio-section .section-title {
+text-align: center;
+font-size: 2.25rem;
+font-weight: 700;
+color: #1a202c;
+margin-bottom: 2.5rem;
 }
-.center-node {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #3a86ff;
-  color: #fff;
-  padding: 20px;
-  border-radius: 50%;
-  font-weight: bold;
-  width: 100px;
-  height: 100px;
+.project-grid {
+display: grid;
+grid-template-columns: repeat(1, minmax(0, 1fr));
+gap: 1.5rem;
+}
+@media (min-width: 768px) {
+.project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+@media (min-width: 1024px) {
+.project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+.project-card {
+background-color: #fff;
+border-radius: 1.5rem;
+padding: 1.5rem;
+border: 1px solid #e5e7eb;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+transition: transform 0.2s, box-shadow 0.2s;
+cursor: pointer;
+}
+.project-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.project-icon-wrapper {
+display: flex;
+align-items: center;
+margin-bottom: 0.5rem;
+}
+.project-icon {
+font-size: 1.5rem;
+color: #1e90ff; /* 기존 .hae-skill과 유사한 색상 사용 */
+margin-right: 1rem;
+}
+.project-title {
+font-size: 1.125rem;
+font-weight: 700;
+color: #1e90ff;
+}
+.project-desc {
+margin-top: 0.5rem;
+color: #4b5563;
+line-height: 1.6;
+}
+
+.project-card{
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.node {
-  position: absolute;
+  flex-direction: column; /* 세로 배치 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  padding: 20px;
+  border-radius: 12px;
   background: #fff;
-  border: 2px solid #3a86ff;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 14px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.node:hover {
-  background: #3a86ff;
-  color: #fff;
-  transform: scale(1.1);
-}
-.tooltip {
-  position: absolute;
-  background: rgba(0,0,0,0.8);
-  color: #fff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  display: none;
-  max-width: 200px;
-  z-index: 999;
+  max-width: 400px;
+  margin: 20px auto; /* 화면 중앙 배치 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ 
 }
