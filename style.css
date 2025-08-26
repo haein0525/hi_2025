@@ -167,3 +167,63 @@ html{scroll-behavior:smooth}[id]{scroll-margin-top:84px}
 .genspark-notice-dialog {
     display: none !important;
 }
+
+
+/* 소통 */
+.collab-map-section {
+  text-align: center;
+  margin: 50px 0;
+  font-family: 'Pretendard', sans-serif;
+}
+.collab-map {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 40px auto;
+  border-radius: 50%;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+}
+.center-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #3a86ff;
+  color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.node {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #3a86ff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.node:hover {
+  background: #3a86ff;
+  color: #fff;
+  transform: scale(1.1);
+}
+.tooltip {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  display: none;
+  max-width: 200px;
+  z-index: 999;
+}
